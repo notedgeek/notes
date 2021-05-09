@@ -64,9 +64,14 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+					<requiresUnpack>
+						<dependency>
+							<groupId>org.asciidoctor</groupId>
+							<artifactId>asciidoctorj</artifactId>
+						</dependency>
+					</requiresUnpack>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
