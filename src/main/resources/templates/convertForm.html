@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+    <style>
+        div {
+            padding: 10px
+        }
+        #inputForm {
+            float: left;
+        }
+        #renderedOutput {
+            float: left;
+            border: none;
+        }
+    </style>
+    <div id="inputForm">
+        <form action="/convert" method="post" target="iframe">
+            <input type="submit" value="Render">
+            <br />
+            <textarea name="asciidoc" rows="60" cols="100" th:text="${defaultAdoc}"></textarea>
+        </form>
+    </div>
+    <div id="renderedOutput">
+        <iframe name="iframe" width="1200" height="1000" frameBorder="0"></iframe>
+    </div>
+</body>
+</html>
